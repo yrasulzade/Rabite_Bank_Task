@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/my_image"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            tools:srcCompat="@drawable/ic_launcher_background" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="32dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_launcher_background"
+            app:layout_constraintEnd_toStartOf="@+id/my_image"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/chat_bubble"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:gravity="end"
+            android:maxWidth="250dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@+id/my_image"
+            app:layout_constraintEnd_toStartOf="@+id/my_image"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/my_image">
+
+            <TextView
+                android:id="@+id/me_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/outgoing_message_buble_rect"
+                android:paddingStart="16dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="8dp"
+                android:textColor="@color/white"
+                tools:text="Hii how are you ?" />
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
